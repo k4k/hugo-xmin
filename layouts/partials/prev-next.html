@@ -1,0 +1,10 @@
+{{ if or (.NextPage) (.PrevPage) }}
+<div style="margin-bottom: 3em;">
+  {{ if .PrevInSection }}
+  <a href="{{ .PrevInSection.Permalink }}" style="float: left;"><< {{ .PrevInSection.Title }}</a>
+  {{end}}
+  {{if .NextInSection }}
+  <a href="{{ .NextInSection.Permalink }}" style="float: right; text-align: right; overflow: hidden;">{{ .NextInSection.Title }} >></a>
+  {{ end }}
+</div>
+{{ end }} 
